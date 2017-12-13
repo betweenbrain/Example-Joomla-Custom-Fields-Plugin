@@ -15,14 +15,6 @@ class JFormFieldExample extends JFormField
 
 	public function getInput()
 	{
-		$html = '<input type="text" name ="exmaple"/>';
-		switch ($this->getAttribute('hide')) {
-			case(1):
-				return $html;
-				break;
-			case(0):
-				return '<label>Example</label>' . $html;
-				break;
-		}
+		return '<input type="text" name="' . $this->name . '" id="' . $this->id . '" value="' . $this->value . '" />';
 	}
 }
