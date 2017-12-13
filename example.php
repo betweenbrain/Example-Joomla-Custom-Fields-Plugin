@@ -29,8 +29,8 @@ class PlgFieldsExample extends FieldsPlugin
 	 */
 	public function onCustomFieldsPrepareDom($field, DOMElement $parent, JForm $form)
 	{
+		// Load the custom JForm field, all the magic will happen there.
 		$fieldNode = parent::onCustomFieldsPrepareDom($field, $parent, $form);
-
 
 		if (!$fieldNode) {
 			return $fieldNode;
